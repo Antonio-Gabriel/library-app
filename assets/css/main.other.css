@@ -1,0 +1,217 @@
+header.active-menu {
+  padding: 20px 0;
+  background: var(--dark-constrast);
+}
+
+header.active-menu span {
+  width: 100%;
+  text-align: center;
+
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text-secondary);
+}
+
+section.content-page-title {
+  margin-top: 2rem;
+}
+
+section.content-page-title h2 {
+  font-size: 22px;
+  font-weight: 700;
+
+  color: var(--text);
+}
+
+section.content-page-title button {
+  border: none;
+  outline: none;
+  box-shadow: none;
+  padding: 8px 14px;
+
+  border-radius: 8px;
+  background: var(--primary);
+
+  font-size: 14px;
+  font-weight: 500;
+
+  display: inline-flex;
+  align-items: center;
+
+  gap: 10px;
+
+  color: var(--text);
+
+  transition: all ease-in-out 0.2s;
+}
+
+section.content-page-title button:hover {
+  filter: brightness(0.8);
+}
+
+section.list table {
+  width: 100%;
+  border-spacing: 0 0.5rem;
+  border-collapse: inherit;
+}
+
+section.list table th {
+  color: var(--text-secondary);
+  font-weight: 400;
+  padding: 1rem 2rem;
+  text-align: left;
+  line-height: 1.5rem;
+
+  font-size: 14px;
+}
+
+section.list table td {
+  padding: 1rem 2rem;
+  border: 0;
+  background: var(--dark-constrast);
+  color: var(--text);
+  font-size: 14px;
+}
+
+@media screen and (max-width: 991px) {
+  section.list table {
+    border: 0;
+  }
+
+  section.list table caption {
+    font-size: 1.3em;
+  }
+
+  section.list table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+
+  section.list table tr {
+    border-bottom: 3px solid #ddd;
+    display: block;
+    margin-bottom: 0.625em;
+  }
+
+  section.list table td {
+    border-bottom: 1px solid var(--border);
+    display: block;
+    font-size: 0.8em;
+    text-align: right;
+  }
+
+  section.list table td::before {
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  section.list table td:last-child {
+    border-bottom: 0;
+  }
+}
+
+/*CREATE BOOK MODAL*/
+#createAuthorModal .modal-dialog {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+#createAuthorModal .modal-dialog .modal-content {
+  background: var(--dark-constrast);
+}
+
+#createAuthorModal .modal-dialog .modal-content .modal-header {
+  border-bottom: none;
+}
+
+#createAuthorModal .modal-dialog .modal-content .modal-header h5 {
+  color: var(--text);
+  font-size: 18px;
+}
+
+#createAuthorModal .modal-dialog .modal-content .modal-header button {
+  box-shadow: none;
+  font-size: 10px;
+}
+
+#createAuthorModal .modal-dialog .modal-content .modal-body form label,
+.edit-form form label {
+  font-size: 12px;
+  color: var(--text-secondary);
+
+  margin-bottom: 6px;
+}
+
+#createAuthorModal .modal-dialog .modal-content .modal-body form input,
+.edit-form form input {
+  padding: 12px 12px;
+  font-size: 12px;
+
+  background: var(--dark-bg) !important;
+  border: var(--dark-constrast) !important;
+  box-shadow: none;
+
+  color: var(--text-secondary) !important;
+}
+
+.edit-form form input {
+  background: var(--dark-constrast) !important;
+  border: var(--dark-constrast) !important;
+  box-shadow: none !important;
+}
+
+.edit-form form select {
+  padding: 12px 12px;
+  font-size: 12px;
+  color: var(--text-secondary) !important;
+  background: var(--dark-constrast) !important;
+  border: var(--dark-constrast) !important;
+  box-shadow: none !important;
+}
+
+.edit-form form textarea {
+  font-size: 12px;
+  color: var(--text-secondary) !important;
+  background: var(--dark-constrast) !important;
+  border: var(--dark-constrast) !important;
+  box-shadow: none !important;
+}
+
+#createAuthorModal
+  .modal-dialog
+  .modal-content
+  .modal-body
+  form
+  input::placeholder {
+  font-size: 11px;
+}
+
+#createAuthorModal .modal-dialog .modal-content .modal-body form button,
+.edit-form form button {
+  width: 100%;
+
+  font-size: 14px;
+
+  background: var(--primary) !important;
+  border: 0;
+
+  box-shadow: none;
+
+  transition: all ease-in-out 0.2s;
+}
+
+#createAuthorModal .modal-dialog .modal-content .modal-body form button:hover,
+.edit-form form button:hover {
+  filter: brightness(0.8);
+}
+
+/*END CREATE BOOK MODAL*/

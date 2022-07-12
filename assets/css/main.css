@@ -1,0 +1,505 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --dark-bg: #121214;
+  --dark-constrast: #202024;
+  --primary: #ea4335;
+  --text: #f5f5f5;
+  --text-secondary: #8d8d99;
+  --border: #2b2b2f;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background: var(--dark-bg);
+}
+
+/* SIGNIN SECTION */
+
+.signIn-wrapper {
+  height: 100vh;
+  background: var(--dark-constrast);
+}
+
+.signIn-wrapper .row {
+  height: 100%;
+}
+
+.signIn-wrapper .row .col-lg-8 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.signIn-wrapper .row .col-lg-4 {
+  padding-right: 2.5rem;
+}
+
+@media (max-width: 767px) {
+  .signIn-wrapper {
+    overflow: visible;
+  }
+
+  .signIn-wrapper .row .col-md-7 {
+    display: none;
+  }
+
+  .signIn-wrapper .row .col-lg-4 {
+    padding-right: inherit;
+  }
+}
+
+.signIn-wrapper .row .col-lg-4 header {
+  margin-bottom: 2.4rem;
+}
+
+.signIn-wrapper .row .col-lg-4 header a {
+  font-size: 1.2rem;
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.signIn-wrapper .row .col-lg-4 .content .description {
+  margin-bottom: 1.5rem;
+}
+
+.signIn-wrapper .row .col-lg-4 .content h1 {
+  font-size: 2rem;
+  max-width: 18.75rem;
+
+  font-weight: 700;
+
+  color: var(--text);
+  margin-bottom: 1rem;
+}
+
+.signIn-wrapper .row .col-lg-4 .content p {
+  max-width: calc(18.75rem + 5rem);
+  color: var(--text-secondary);
+
+  font-size: 14px;
+}
+
+@media (max-width: 414px) {
+  .signIn-wrapper .row .col-lg-4 .content h1 {
+    font-size: 1.6rem;
+    max-width: 16.75rem;
+  }
+
+  .signIn-wrapper .row .col-lg-4 .content p {
+    font-size: 12px;
+  }
+}
+
+.signIn-wrapper .row .col-lg-4 .content form label {
+  font-size: 12px;
+  color: var(--text-secondary);
+
+  margin-bottom: 6px;
+}
+
+.signIn-wrapper .row .col-lg-4 .content form input {
+  padding: 8px 12px;
+  font-size: 12px;
+
+  background: var(--dark-bg);
+  border: var(--dark-constrast);
+  box-shadow: none;
+
+  color: var(--text-secondary);
+}
+
+.signIn-wrapper .row .col-lg-4 .content form input::placeholder {
+  font-size: 11px;
+}
+
+.signIn-wrapper .row .col-lg-4 .content form button {
+  width: 100%;
+
+  font-size: 14px;
+
+  background: var(--primary);
+  border: 0;
+
+  box-shadow: none;
+
+  transition: all ease-in-out 0.2s;
+}
+
+.signIn-wrapper .row .col-lg-4 .content form button:hover {
+  filter: brightness(0.8);
+}
+
+/* END SIGNIN SECTION */
+
+/* DASHBOARD SECTION */
+
+header.dashboard {
+  background: var(--dark-constrast);
+  padding: 0 0 6.7rem;
+}
+
+header.dashboard .navbar-brand {
+  font-size: 1.2rem;
+  color: var(--primary);
+  font-weight: 700;
+}
+
+header.dashboard .navbar-brand span {
+  color: var(--text-secondary);
+  font-size: 11px;
+  font-weight: 400;
+}
+
+header.dashboard .navbar-toggler {
+  padding: 0 1rem 0 0;
+  font-size: 14px;
+
+  border: none;
+  box-shadow: none;
+}
+
+header.dashboard .navbar-toggler-icon {
+  color: var(--text-secondary);
+}
+
+header.dashboard .nav-link {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--text-secondary);
+}
+
+header.dashboard .nav-link.active {
+  font-weight: 700;
+  color: var(--text);
+}
+
+header.dashboard .user-info {
+  gap: 12px;
+}
+
+header.dashboard .user-info h5 {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+header.dashboard .user-info span {
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 767px) {
+  header.dashboard .user-info {
+    border-top: 1px solid var(--border);
+
+    padding: 12px 0;
+    justify-content: space-between;
+  }
+}
+
+.actions-by-review {
+  margin-top: -6.5rem;
+
+  padding: 1rem 0;
+  border-top: 1px solid var(--border);
+}
+
+.actions-by-review ul {
+  gap: 14px;
+}
+
+.actions-by-review li strong {
+  color: var(--text);
+
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.actions-by-review li span {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.actions-by-review button {
+  border: none;
+  outline: none;
+  box-shadow: none;
+  padding: 8px 14px;
+
+  border-radius: 8px;
+  background: var(--primary);
+
+  font-size: 14px;
+  font-weight: 500;
+
+  display: inline-flex;
+  align-items: center;
+
+  gap: 10px;
+
+  color: var(--text);
+
+  transition: all ease-in-out 0.2s;
+}
+
+.actions-by-review button:hover {
+  filter: brightness(0.8);
+}
+
+@media (max-width: 380px) {
+  header.dashboard {
+    padding: 0 0 8rem;
+  }
+
+  .actions-by-review {
+    margin-top: -7.8rem;
+  }
+
+  .actions-by-review .container {
+    flex-direction: column;
+    align-items: flex-start !important;
+  }
+
+  .actions-by-review .container div:last-child {
+    width: 100%;
+    margin-top: 0.8rem;
+  }
+
+  .actions-by-review .container div:last-child button {
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+  }
+}
+
+/* END DASHBOARD SECTION */
+
+/* CONTENT WRAPPER SECTION */
+
+.content-wrapper {
+  height: 100%;
+}
+
+.content-wrapper .books {
+  padding-top: 3.5rem;
+  padding-bottom: 1rem;
+}
+
+.content-wrapper .books .books-title {
+  margin-bottom: 1rem;
+}
+
+.content-wrapper .books .books-title h2 {
+  font-size: 22px;
+  font-weight: 700;
+
+  color: var(--text);
+}
+
+.content-wrapper .books table {
+  width: 100%;
+  border-spacing: 0 0.5rem;
+  border-collapse: inherit;
+}
+
+.content-wrapper .books table th {
+  color: var(--text-secondary);
+  font-weight: 400;
+  padding: 1rem 2rem;
+  text-align: left;
+  line-height: 1.5rem;
+
+  font-size: 14px;
+}
+
+.content-wrapper .books table td {
+  padding: 1rem 2rem;
+  border: 0;
+  background: var(--dark-constrast);
+  color: var(--text);
+  font-size: 14px;
+}
+
+.actions-edit {
+  gap: 8px;
+}
+
+.actions-edit li {
+  width: 25px;
+  height: 25px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 2px;
+  background: var(--border);
+
+  transition: all ease-in-out 0.2s;
+}
+
+.actions-edit li:first-child:hover {
+  background: var(--text-secondary);
+}
+
+.actions-edit li:last-child:hover {
+  background: var(--primary);
+}
+
+.actions-edit li a img {
+  width: 16px;
+  height: 16px;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 991px) {
+  .content-wrapper .books table {
+    border: 0;
+  }
+
+  .content-wrapper .books table caption {
+    font-size: 1.3em;
+  }
+
+  .content-wrapper .books table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+
+  .content-wrapper .books table tr {
+    border-bottom: 3px solid #ddd;
+    display: block;
+    margin-bottom: 0.625em;
+  }
+
+  .content-wrapper .books table td {
+    border-bottom: 1px solid var(--border);
+    display: block;
+    font-size: 0.8em;
+    text-align: right;
+  }
+
+  .content-wrapper .books table td::before {
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  .content-wrapper .books table td:last-child {
+    border-bottom: 0;
+  }
+}
+
+/* END CONTENT WRAPPER SECTION */
+
+/*CREATE BOOK MODAL*/
+#createTaskModal .modal-dialog {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+#createTaskModal .modal-dialog .modal-content {
+  background: var(--dark-constrast);
+}
+
+#createTaskModal .modal-dialog .modal-content .modal-header {
+  border-bottom: none;
+}
+
+#createTaskModal .modal-dialog .modal-content .modal-header h5 {
+  color: var(--text);
+  font-size: 18px;
+}
+
+#createTaskModal .modal-dialog .modal-content .modal-header button {
+  box-shadow: none;
+  font-size: 10px;
+}
+
+#createTaskModal .modal-dialog .modal-content .modal-body form label {
+  font-size: 12px;
+  color: var(--text-secondary);
+
+  margin-bottom: 6px;
+}
+
+.form-select {
+  background-image: url('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-') !important;
+}
+
+#createTaskModal .modal-dialog .modal-content .modal-body form input,
+#createTaskModal .modal-dialog .modal-content .modal-body form select {
+  padding: 12px 12px;
+  font-size: 12px;
+
+  background: var(--dark-bg) !important;
+  border: var(--dark-constrast) !important;
+  box-shadow: none;
+
+  color: var(--text-secondary);
+}
+
+#createTaskModal .modal-dialog .modal-content .modal-body form textarea {
+  font-size: 12px;
+  background: var(--dark-bg) !important;
+  border: var(--dark-constrast) !important;
+  box-shadow: none;
+
+  color: var(--text-secondary);
+}
+
+#createTaskModal
+  .modal-dialog
+  .modal-content
+  .modal-body
+  form
+  input::placeholder {
+  font-size: 11px;
+}
+
+#createTaskModal .modal-dialog .modal-content .modal-body form button {
+  width: 100%;
+
+  font-size: 14px;
+
+  background: var(--primary);
+  border: 0;
+
+  box-shadow: none;
+
+  transition: all ease-in-out 0.2s;
+}
+
+#createTaskModal .modal-dialog .modal-content .modal-body form button:hover {
+  filter: brightness(0.8);
+}
+
+@media (min-width: 576px) {
+  .modal-dialog {
+    max-width: 380px;
+  }
+}
+/*END CREATE BOOK MODAL*/
